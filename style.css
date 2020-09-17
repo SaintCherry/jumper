@@ -1,0 +1,127 @@
+/*Обнуление*/
+*{
+padding: 0;
+margin: 0;
+border: 0;
+}
+*,*:before, *:after{
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+:focus, :active {outline: none;}
+a:focus,a:active {outline: none;}
+nav, footer, header, aside {display: block;}
+html, body {
+height: 100%;
+width: 100%;
+font-size: 100%;
+line-height: 1;
+font-size: 14px;
+-ms-text-size-adjust: 100%;
+-moz-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%;
+}
+input, button, textarea {font-family:inherit;}
+input::-ms-clear {display: none;}
+button {cursor: pointer;}
+button::-moz-focus-inner {padding:0; border:0;}
+a, a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+ul li {list-style: none;}
+img {vertical-align: top;}
+h1, h2, h3, h4, h5, h6 {font-size: inherit; font-weight: 400;}
+/*---Обнуление стилей---*/
+
+.field {
+    margin: 0 auto;
+    margin-top: 100px;
+    padding-top: 135px;
+    height: 562px;
+    width: 1000px;
+    background-image: url(img/back.png);
+    background-size: cover;
+}
+
+.opening, .ending {
+    height: 562px;
+    width: 1000px;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    left:50%; 
+    margin-left:-500px;
+    z-index: 99;
+    color: white;
+    font-family: AdventureIndianaJones, sans-serif;
+    display: none;
+    flex-direction: column;
+}
+
+.title {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 80px;
+}
+
+.text {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 70px;
+    line-height: 46px;
+}
+
+.button {
+    width: 240px;
+    height: 50px;
+    background-color: rgba(139, 0, 0, .6);
+    margin: 0 auto;
+    margin-top: 80px;
+    font-size: 22px;
+    color: white;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+#game {
+    width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+    position: absolute;
+}
+
+#character {
+    width: 70px;
+    height: 100px;
+    background-image: url(img/deadpool.png);
+    background-size: cover;
+    position: relative;
+    top: 300px;
+    left: 160px;
+}
+
+.animate {
+    animation: jump .5s;
+}
+
+@keyframes jump {
+    0%{top: 300px;}
+    30%{top: 200px;}
+    70%{top: 200px;}
+    100%{top: 300px;}
+}
+
+#block {
+    width: 40px;
+    height: 40px;
+    background-image: url(img/fire.png);
+    background-size: cover;
+    position: relative;
+    top: 260px;
+    left: 960px;
+    animation: block 2s infinite linear; /* Скорость анимации фаерболла */
+}
+
+@keyframes block {
+    0%{left: 960px;}
+    100%{left: -10px;}
+}
